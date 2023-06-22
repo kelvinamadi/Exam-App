@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="adminStyle.css" />
+    <title>Admin Delete Menu</title>
+
+    <script type="module">
+      import Registry from "./scripts/Registry.js"
+      import Administrator from "./scripts/Administrator.js"
+      
+      Registry.instance.loadRegistry();
+      
+      var listOfUsers = Registry.instance.getAllUsers();
+      var usernames = []
+      for (let i = 0; i < listOfUsers.length; i++) {
+        usernames.push(listOfUsers[i].username);
+      }
+
+      // Get a reference to the dropdown list element
+      const dropdown = document.querySelector(".user-dropdown");
+
+      // Loop through the usernames array and create an option element for each one
+      usernames.forEach((username) => {
+      // Create a new option element
+      const option = document.createElement("option");
+
+      // Set the value and text of the option element to the current username
+      option.value = username;
+      option.textContent = username;
+
+      // Add the option element to the dropdown list
+      dropdown.appendChild(option);
+      });
+
+      function myFunction() {
+        var x = document.getElementById("userID");
+        var domNode = document.getElementById("userID");
+        var value = domNode.selectedIndex;
+        var selected_text = domNode.options[value].text;
+        let text = "Press 'ok' to confirm deletion of "+ selected_text;
+        if (confirm(text) == true) {
+          window.alert("User Has been successfully deleted");
+          let selectedUser;
+          // search through the users array to find matching username
+          for (let i = 0; i < listOfUsers.length; i++) {
+              if (listOfUsers[i].username == selected_text) {
+                  selectedUser = listOfUsers[i];
+              }
+          }
+          Registry.instance.removeUser(selectedUser);
+          Registry.instance.saveRegistry();
+        }
+      }
+      const deleteUserButton = document.getElementById("remove-user");
+      deleteUserButton.addEventListener("click", myFunction);
+    </script>
+</head>
+
+<body>
+
+    <h1>Admin Delete User</h1>
+
+      <p id="para1">A drop down list of all users</p>
+    
+
+      <form id="delUser">
+        <label for="users">Choose a user:</label>
+        <select class="user-dropdown" id="userID"></select>
+        <br><br>
+        <!-- <input type="submit" value="Submit"> -->
+      </form>
+            
+      <p>Click the "Remove Selected User" button and the user selected will be deleted.</p>
+
+      <div class="menuButton">
+        <button id="remove-user">Remove Selected User</button>
+        <button onclick='window.location.href="/adminMainMenu.html"'>return to admin page</button>
+      </div>
+    
+</body>
+
+</html>

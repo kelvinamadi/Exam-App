@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Course Selection</title>
+    <script type="module" src="scripts/Registry.js"></script>
+    <script type="module" src="scripts/Course.js"></script>
+    <script type="module" src="scripts/User.js"></script>
+    <script type="module" src="scripts/Trainee.js"></script>
+    <script type="module" src="scripts/TrainingManager.js"></script>
+    <script type="module" src="scripts/Administrator.js"></script>
+    <script type="module" src="scripts/UserSession.js"></script>
+</head>
+
+<body>
+    <h1>Select Course</h1>
+    <h4>Select a course that you would like to take an exam for</h4>
+    <div class="menuButton">
+        <button onclick='window.location.href="courseMenu.html"'>Course 1</button>
+        <button onclick='window.location.href="#"'>Course 2</button>
+        <button onclick='window.location.href="#"'>Course 3</button>
+        <button onclick='window.location.href="#"'>Course 4</button>
+        <button onclick='window.location.href="#"'>Course 5</button>
+        <button onclick='window.location.href="/TraineeMainMenu.html"'>return to Trainee page</button>
+    </div>
+    <footer>
+        <p>©</p>
+    </footer>
+
+    <script type="module">
+        import Registry from "./scripts/Registry.js";
+        Registry.instance.loadRegistry();
+        Registry.instance.saveRegistry();
+    </script>
+</body>
+
+</html>

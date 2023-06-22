@@ -1,0 +1,16 @@
+Login
+Create/Delete/Update user
+Take exam
+create Exam
+Front end - Looking good
+Adding trainee to course
+
+Have one leading onto the other
+
+Create Training Manager -> Create exam -> Login with Trainee -> Take exam -> Delete user with Admin -> Show exam results from Traning Manager
+
+Create local storage thing with F12 Application section
+
+Use mainly client-side stuff (Javascript). Makes it easier
+
+Work from registry outwards - Allow saving data

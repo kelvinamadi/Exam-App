@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8" />
+
+    <title>Create Training Manager</title>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <meta name="description" content="" />
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+    <link rel="icon" href="images/favicon.png">
+
+    <script type="module" src="scripts/Registry.js"></script>
+    <script type="module" src="scripts/Course.js"></script>
+    <script type="module" src="scripts/User.js"></script>
+    <script type="module" src="scripts/Trainee.js"></script>
+    <script type="module" src="scripts/TrainingManager.js"></script>
+    <script type="module" src="scripts/Administrator.js"></script>
+
+    <style>
+        .password {
+            filter: blur(5px);
+            color: black;
+            transition: 0.2s;
+        }
+
+        .password:hover {
+            filter: none;
+            cursor: none;
+        }
+    </style>
+    
+
+</head>
+
+<body>
+    <button onclick='window.location.href="adminMainMenu.html"'>Back</button>
+    <form id="create-tm-form">
+        <h3>Create a new training manager</h3>
+        <label for="name">Full name</label>
+        <input type="text" id="name-inp" placeholder="John Doe" name="Enter full name" required><br><br>
+        <label for="email">Email address</label>
+        <input type="email" id="email-inp" placeholder="example@somewhere.com" name="Enter email address" required><br><br>
+        <input type="submit" value="Create" name="create-tm">
+    </form>
+</body>
+</html>
+
+<script type="module">
+    import Registry from "./scripts/Registry.js"
+
+    Registry.instance.loadRegistry()
+
+    function createTrainingManager(e) {
+        console.log(Registry.instance)
+        e.preventDefault()
+        let tm = Registry.instance.createUser(tm_name.value, "m")
+        tm.registerEmail(tm_email.value)
+        console.log(tm)
+        let details = document.createElement("p")
+        details.innerHTML = "<b>" + tm_name.value + "</b><br>Created new user: <em>" + tm.username + "</em><br>Password: <em class='password'>" + tm.password + "</em>"
+        Registry.instance.saveRegistry()
+        document.body.append(details)
+    }
+    const tm_name = document.getElementById("name-inp")
+    const tm_email = document.getElementById("email-inp")
+    const tm_form = document.getElementById("create-tm-form")
+
+    tm_form.addEventListener("submit", createTrainingManager)
+
+</script>

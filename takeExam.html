@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="examStyle.css" />
+        <title>Exam</title>
+
+        <script>
+
+            if(window.sessionStorage.getItem('now') == "789"){
+                console.log(1111)
+                var now = new Date().getTime();
+                window.sessionStorage.setItem('now', now)
+            }else{
+                console.log(9999)
+                var now = parseInt(window.sessionStorage.getItem('now'));
+            }
+            
+            var twoHoursFromNow = new Date(now + (2 * 60 * 60 * 1000));
+            // var fiveSeconds = new Date(now + (5 * 1000));
+            var updater = setInterval(function(){
+                now = new Date().getTime();
+                var countdown = twoHoursFromNow - now;
+                var minutes = Math.floor(countdown / (1000 * 60));
+                document.getElementById("timer").innerHTML = minutes;
+                console.log(minutes);
+                if (countdown < 0) {
+                    clearInterval(updater);
+                    document.getElementById("submit").click();
+                }
+            }, 1000);
+        </script>
+        <script type="module" src="scripts/Registry.js"></script>
+
+        <script type="module" src="scripts/takeExam.js"></script>
+        
+    </head>
+
+    <body>
+        <h1>Exam</h1>
+        
+        <section id="countdown">
+            <p>Time left:</p>
+            <p id="timer">120</p>
+        </section>
+
+        <div class="main">
+            <form id = "ansForm">
+                <label for="exam-name">Sample Course Exam</label>
+                <p>
+                    <label for ="q1">This is a sample question. Answer below:</label>
+                    
+                    <textarea id="q1" rows ="10" cols="50" name="answer" spellcheck="false"> </textarea>
+                    <input type = "file"  name="answer">
+                </p> 
+                <p>
+                    <label for = "q2">Another question here! Answer below:</label>
+                    <textarea id = "q2" rows ="10" cols="50" name="answer" spellcheck="false"> </textarea>
+                    <input type = "file"  name="answer">
+                </p>
+                
+                <p id="submitExam">
+                    <input id="submit" type="button" value="Submit" >
+                    <input id = "save" type="button" value="Save">
+                </p>
+
+            </form>
+        </div>
+
+       
+    <!-- [if IE]><div style="width: 100%; position: fixed; z-index: 1000; bottom: 0; left: 0; background: lightgray;"><p>Outdated browser dectected. Please use a modern browser for a better browsing experience.</p><div onClick="parentNode.remove()">Close [X]</div></div><![endif] -->
+    </body>
+    <footer>
+            <p>©</p>
+    </footer>
+
+    
+</html>

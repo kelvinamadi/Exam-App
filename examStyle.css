@@ -1,0 +1,102 @@
+/*CSS styling for exam page*/
+
+html {
+    height: 99%;
+}
+
+body {
+    position: relative;
+    background-color: #dad2bc;
+    min-height: 100%;
+    width: 99%;
+    margin: 10px;
+}
+
+h1 {
+    font-size: 2em;
+    font-weight: bold;
+    color: #252323;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 0;
+    border: 1px solid #252323;
+    padding: 10px 0;
+}
+
+footer {
+    width: 100%;
+    border-top: #252323 1px solid;
+    background-color: #70798C;
+    height: 50px;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+}
+
+#countdown{
+    position:fixed;
+    margin:0 auto;
+}
+
+#timer{
+    margin:0 auto;
+    font-size: 25px;
+}
+
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 7rem;
+    padding-right: 7rem;
+}
+
+.main form input{
+    display: flexbox;
+    width:98%;
+    position: relative;
+    border-radius: 1.5%;
+    margin-top:1%;
+    margin-bottom: 1%;
+}
+
+.main label{
+    display: inline-block;
+    position:relative;
+    text-align: left;
+    vertical-align:top;
+}
+
+.main textarea {
+    display:flex;
+    word-wrap: break-word;
+    height:auto;
+    align-items: center;
+    width:100%;
+    border-color:#252323;
+    resize: none;
+}
+
+#submitExam {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#submitExam input{
+    width: 20%;
+    height: 20px;
+    border-radius: 5%;
+    border-color:#252323;
+    margin: 10px;
+    background-color: #b6ada4;
+}
+
+#submitExam input:hover{
+    background: #70798C;
+    color: #252323;
+    border-color: #b6ada4;
+}
+

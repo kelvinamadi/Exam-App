@@ -1,0 +1,83 @@
+{
+    "admins": [
+        {
+            "email": null,
+            "id": 4,
+            "fullname": "John Doe",
+            "username": "ad004",
+            "password": "8A-QznbT"
+        }
+    ],
+    "trainingManagers": [
+        {
+            "email": null,
+            "id": 1,
+            "fullname": "John Doe",
+            "username": "trm001",
+            "password": "DjQJ@aF5",
+            "exams": [],
+            "unassignedTrainees": [
+                {
+                    "email": "joe@gmail.com",
+                    "id": 6,
+                    "fullname": "Joe",
+                    "username": "tr006",
+                    "password": "Uxs?lVxm",
+                    "programme": null,
+                    "exams": [],
+                    "ongoingExams": []
+                }
+            ],
+            "courses": [
+                1
+            ]
+        },
+        {
+            "email": null,
+            "id": 2,
+            "fullname": "John Doe2",
+            "username": "trm002",
+            "password": "Po3a!tPg",
+            "exams": [],
+            "unassignedTrainees": [],
+            "courses": []
+        },
+        {
+            "email": null,
+            "id": 3,
+            "fullname": "John Doe3",
+            "username": "trm003",
+            "password": "OHkjNaQ!",
+            "exams": [],
+            "unassignedTrainees": [],
+            "courses": []
+        }
+    ],
+    "trainees": [
+        {
+            "email": "joe@gmail.com",
+            "id": 6,
+            "fullname": "Joe",
+            "username": "tr006",
+            "password": "Uxs?lVxm",
+            "programme": null,
+            "exams": [],
+            "ongoingExams": []
+        }
+    ],
+    "courses": [
+        {
+            "id": 1,
+            "name": "Maths",
+            "trainingManager": 1,
+            "trainees": [
+                6
+            ],
+            "exams": []
+        }
+    ],
+    "lastUserId": 6,
+    "lastCourseId": 1,
+    "lastExamId": 0,
+    "exams": []
+}

@@ -1,0 +1,146 @@
+{
+    "admins": [
+        {
+            "email": null,
+            "id": 4,
+            "fullname": "John Doe",
+            "username": "ad004",
+            "password": "!KhEMc@n"
+        }
+    ],
+    "trainingManagers": [
+        {
+            "email": null,
+            "id": 1,
+            "fullname": "John Doe",
+            "username": "trm001",
+            "password": "-XrYG+Dh",
+            "exams": [
+                1
+            ],
+            "unassignedTrainees": [
+                {
+                    "email": "joe@gmail.com",
+                    "id": 6,
+                    "fullname": "Joe",
+                    "username": "tr006",
+                    "password": "yF5xpCjS",
+                    "programme": null,
+                    "exams": [
+                        {
+                            "result": null,
+                            "examBase": 1,
+                            "answers": []
+                        }
+                    ],
+                    "ongoingExams": []
+                }
+            ],
+            "courses": [
+                1
+            ]
+        },
+        {
+            "email": null,
+            "id": 2,
+            "fullname": "John Doe2",
+            "username": "trm002",
+            "password": "10hwQRhJ",
+            "exams": [],
+            "unassignedTrainees": [],
+            "courses": []
+        },
+        {
+            "email": null,
+            "id": 3,
+            "fullname": "John Doe3",
+            "username": "trm003",
+            "password": "PrckwtGC",
+            "exams": [],
+            "unassignedTrainees": [],
+            "courses": []
+        }
+    ],
+    "trainees": [
+        {
+            "email": "joe@gmail.com",
+            "id": 6,
+            "fullname": "Joe",
+            "username": "tr006",
+            "password": "yF5xpCjS",
+            "programme": null,
+            "exams": [
+                {
+                    "result": null,
+                    "examBase": 1,
+                    "answers": []
+                }
+            ],
+            "ongoingExams": []
+        }
+    ],
+    "courses": [
+        {
+            "id": 1,
+            "name": "Maths",
+            "trainingManager": 1,
+            "trainees": [
+                6,
+                6
+            ],
+            "exams": [
+                {
+                    "id": 1,
+                    "course": 1,
+                    "examItems": [],
+                    "questions": [
+                        {
+                            "questionText": "This is a sample question. Answer below:",
+                            "totalMarks": 5
+                        },
+                        {
+                            "questionText": "Another question here! Answer below:",
+                            "totalMarks": 5
+                        }
+                    ],
+                    "duration": {
+                        "minutes": 24,
+                        "hours": 0
+                    },
+                    "startTime": 1681254000000,
+                    "examWeight": 0.2,
+                    "isOver": false,
+                    "isVisible": false
+                }
+            ]
+        }
+    ],
+    "lastUserId": 6,
+    "lastCourseId": 1,
+    "lastExamId": 1,
+    "exams": [
+        {
+            "id": 1,
+            "course": 1,
+            "examItems": [],
+            "questions": [
+                {
+                    "questionText": "This is a sample question. Answer below:",
+                    "totalMarks": 5
+                },
+                {
+                    "questionText": "Another question here! Answer below:",
+                    "totalMarks": 5
+                }
+            ],
+            "duration": {
+                "minutes": 24,
+                "hours": 0
+            },
+            "startTime": 1681254000000,
+            "examWeight": 0.2,
+            "isOver": false,
+            "isVisible": false
+        }
+    ]
+}

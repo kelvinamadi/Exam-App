@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Progress Report</title>
+
+    <script type="module" src="scripts/Registry.js"></script>
+
+    <script type="module" src="scripts/progressReport.js"></script>
+</head>
+
+<body>
+
+    <h1>Progress Report Page</h1>
+
+      <p id="para1">A drop down list of all exams that have been marked</p>
+    
+
+      <form id="progressRep">
+        <label for="exams">Choose an exam report to view:</label>
+        <select name="exam" id="examID">
+          <option value="exam1">Sample Course Exam</option>
+          <option value="exam2">exam2</option>
+          <option value="exam3">exam3</option>
+          <option value="exam4">exam4</option>
+        </select>
+        <br><br>
+      </form>
+
+      <script>
+        function myFunction() {
+          var x = document.getElementById("examID");
+          // window.alert("This is where you view the progress report");
+        }
+        </script>
+      
+      <p>Click the "View Selected Report" button to view the progress report of the selected exam.</p>
+
+      <div class="menuButton">
+        <button id = "button">View Selected Report</button>
+        <button onclick='window.location.href="./managerMainMenu.html"'>return to manager page</button>
+      </div>
+
+      <div id="div" class="menuButton">
+        <textarea name="" id="text" cols="75" rows="30"></textarea>
+      </div>
+    
+</body>
+
+</html>
